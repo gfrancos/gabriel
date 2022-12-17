@@ -1,5 +1,6 @@
 <html>
 <!--****************************************************************************************************************************-->
+
 <head>
     <!--Parte do CSS-->
     <style>
@@ -8,10 +9,12 @@
             font-family: 'Quantum';
             src: url('Quantum.otf') format('opentype');
         }
+
         @font-face {
             font-family: 'ethnocentric rg';
             src: url('ethnocentric rg.otf') format('opentype');
         }
+
         /*Aqui ele define o plano de fundo da página de login*/
         body {
             background-image: url("fundo2.gif");
@@ -19,6 +22,7 @@
             background-size: cover;
             background-attachment: fixed;
         }
+
         /*Estilo da mensagem do topo*/
         .mensagem {
             font-family: 'Quantum', Tahoma;
@@ -26,6 +30,7 @@
             text-align: center;
             color: crimson;
         }
+
         /*estilo do container que contem os campos de usuário e senha*/
         .campo {
             font-family: 'ethnocentric rg', Tahoma;
@@ -36,16 +41,19 @@
             font-size: x-large;
             color: crimson;
         }
+
         /*estilo do campo de usuário*/
         #text {
             font-size: 20px;
             border-radius: 10px;
         }
+
         /*estilo do campo senha*/
         #password {
             font-size: 20px;
             border-radius: 10px;
         }
+
         /*estilo do container*/
         .container {
             display: flex;
@@ -59,6 +67,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+
         /*estilo do botão de prosseguir*/
         .botao {
             border-radius: 50px;
@@ -71,22 +80,23 @@
     </style>
 </head>
 <!--****************************************************************************************************************************-->
+
 <body>
     <!--Escreve a div da Mensagem do Topo-->
     <div class="mensagem">Seja Bem Vindo</div>
     <!--Escreve a div do container-->
     <div class="container">
-    <!--Escreve a div do campo Usuário-->
+        <!--Escreve a div do campo Usuário-->
         <div class="campo">
             <label>Usuário:</label>
             <input id="text" type="text" onkeypress="validarEnter(event)" />
         </div>
-    <!--Escreve a div do campo Senha-->
+        <!--Escreve a div do campo Senha-->
         <div class="campo">
             <label>Senha:</label>
             <input id="password" type="password" onkeypress="validarEnter(event)" />
         </div>
-    <!--Escreve a div do meu Botão de Prosseguir-->
+        <!--Escreve a div do meu Botão de Prosseguir-->
         <div class="botao">
             <button class="botao" onclick="validarLogin()">Prosseguir</button>
         </div>
@@ -97,22 +107,23 @@
     <script>
         // Função que é chamada quando o usuário pressiona a tecla Enter
         function validarEnter(event) {
-          // Verifica se a tecla pressionada foi a tecla Enter (código 13)
-          if (event.keyCode == 13) {
-            // Chama a função de validação do login
-            validarLogin();
-          }
+            // Verifica se a tecla pressionada foi a tecla Enter (código 13)
+            if (event.keyCode == 13) {
+                // Chama a função de validação do login
+                validarLogin();
+            }
         }
     </script>
     <!--Escreve o script pra página começar com os edits em branco-->
     <script>
         // Executa o script quando a página for carregada
-        window.onload = function() {
-          // Limpa os campos de texto
-          document.getElementById('text').value = '';
-          document.getElementById('password').value = '';
+        window.onload = function () {
+            // Limpa os campos de texto
+            document.getElementById('text').value = '';
+            document.getElementById('password').value = '';
         }
     </script>
 </body>
 <!--****************************************************************************************************************************-->
+
 </html>
