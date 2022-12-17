@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+
+
+        /*Aqui ele define o plano de fundo da página*/
+        body {
+            background-image: url("fundo4.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* Define o estilo dos botões */
+        button {
+            width: 150px;
+            height: 60px;
+            font-size: 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            display: block;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+
+        /* Define o estilo do elemento p */
+        p {
+            text-align: center;
+            font-size: 30px;
+            color: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Cria o campo de pontuação -->
+    <p>Pontuação: <span id="score">0</span> pontos</p>
+
+    <!-- Cria os botões -->
+    <button id="button1">+1 ponto</button>
+    <button id="button2">+5 pontos</button>
+    <button id="button3">+10 pontos</button>
+
+    <!-- Cria o botão de reset -->
+    <button id="reset">Reset</button>
+
+    <script>
+        // Obtém os botões e o campo de pontuação
+        var button1 = document.getElementById("button1");
+        var button2 = document.getElementById("button2");
+        var button3 = document.getElementById("button3");
+        var reset = document.getElementById("reset");
+        var score = document.getElementById("score");
+
+        // Define a pontuação inicial
+        var points = 0;
+
+        // Captura o evento de clique nos botões
+        button1.addEventListener("click", function () {
+            // Adiciona 1 ponto
+            points += 1;
+            // Atualiza o campo de pontuação
+            score.innerHTML = points;
+        });
+        button2.addEventListener("click", function () {
+            // Adiciona 5 pontos
+            points += 5;
+            // Atualiza o campo de pontuação
+            score.innerHTML = points;
+        });
+        button3.addEventListener("click", function () {
+            // Adiciona 10 pontos
+            points += 10;
+            // Atualiza o campo de pontuação
+            score.innerHTML = points;
+        });
+        reset.addEventListener("click", function () {
+            // Reseta a pontuação
+            points = 0;
+            // Atualiza o campo de pontuação
+            score.innerHTML = points;
+        });
+    </script>
+</body>
+
+</html>
