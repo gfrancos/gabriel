@@ -10,7 +10,7 @@ function validarLogin() {
         (usuario == 'zilmar' && senha == 'zilmar') ||
         (usuario == 'stanley' && senha == 'stanley')) {
       // Redireciona para a página da área restrita
-      window.location.href = 'inicio.html';
+      window.location.href = 'principal.html';
     } else {
       // Mostra uma mensagem de erro e joga o foco para o campo de usuário
       alert('Usuário ou senha inválidos');
