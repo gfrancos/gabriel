@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<!--****************************************************************************************************************************-->
+
+<head>
+    <title>Início</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <!--Parte do CSS-->
+    <style>
+        /*Aqui ele define o plano de fundo da página de login*/
+        body {
+            background-image: url("fundo3.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        #menu-superior {
+            position: fixed;
+            /* Fixamos o menu na parte superior da tela */
+            top: 0;
+            left: 0;
+            right: 0;
+            /* Centralizamos o menu horizontalmente usando as margens automáticas */
+            margin: 0 auto;
+            /* Ajustamos o espaçamento e a fonte */
+            padding: 10px;
+            font-size: 25px;
+            /* Removemos os marcadores da lista */
+            list-style: none;
+            /* Ajustamos a cor de fundo */
+            background-color: darkred;
+        }
+
+        #menu-superior li {
+            /* Exibimos os itens do menu lado a lado */
+            display: inline-block;
+            /* Ajustamos o espaçamento entre os itens */
+            margin: 0 120px;
+        }
+
+        #menu-superior li a {
+            /* Ajustamos a cor do texto e a cor do link quando o mouse estiver sobre ele */
+            color: white;
+            text-decoration: none;
+            transition: color 0.5s;
+        }
+
+        #menu-superior li a:hover {
+            color: chartreuse;
+        }
+    </style>
+</head>
+<!--****************************************************************************************************************************-->
+
+<body>
+    <!-- Criamos o menu superior usando uma lista não ordenada -->
+    <ul id="menu-superior">
+        <li><a href="jogocores.html">Jogo Cores</a></li>
+        <li><a href="jogopontuacao.html">Jogo Pontuação</a></li>
+        <li><a href="favoritos.html">Favoritos</a></li>
+    </ul>
+
+    <!-- Adicionamos um pouco de JavaScript para redirecionar o usuário para a página correta quando ele clicar em um item do menu -->
+    <script type="text/javascript">
+        // Obtemos a lista do menu superior
+        const menuSuperior = document.querySelector('#menu-superior');
+        // Adicionamos um event listener para detectar quando o usuário clica em um item do menu
+        menuSuperior.addEventListener('click', (event) => {
+            // Obtemos o elemento que foi clicado
+            const elemento = event.target;
+            // Verificamos se o elemento clicado é um item do menu (tag <li>)
+            if (elemento.tagName === 'LI') {
+                // Obtemos o link (tag <a>) do elemento clicado
+                const link = elemento.querySelector('a');
+                // Redirecionamos o usuário para o endereço do link
+                window.location.href = link.href;
+            }
+        });
+    </script>
+</body>
+<!--****************************************************************************************************************************-->
+
+</html>
